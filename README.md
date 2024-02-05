@@ -25,7 +25,7 @@ PixelForge is a full-stack web application developed as an individual project, c
 
 ## Project Link
 
-[PixelForge - Live Demo](https://your-pixelforge-project-link.com)
+[PixelForge - Live Demo](https://boisterous-centaur-6f7b68.netlify.app/)
 
 ## Difficulties Faced
 
@@ -49,7 +49,7 @@ During the development of PixelForge, several challenges were encountered:
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/your-username/pixelforge.git`
+1. Clone the repository: `git clone https://github.com/Surajdy/pixelforge.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
 
