@@ -12,6 +12,7 @@ PixelForge is a full-stack web application developed as an individual project, c
 
 ### Backend:
 - MERN Stack (MongoDB, Express.js, React, Node.js)
+- https://github.com/Surajdy/Pizelforge-backend.git
 
 ### Payment Gateway:
 - Razorpay
