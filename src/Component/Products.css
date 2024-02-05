@@ -1,0 +1,144 @@
+.productPage{
+    padding: 5%;
+    background-color: #191826;
+  }
+  .headingContainer{
+    text-align: start;
+    margin-top: -100px;
+  }
+  .headingContainer div{
+    margin-top: -50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headingContainer div h1{
+    color: white;
+    font-size: 30px;
+  }
+  .headingContainer div button{
+    width: 100px;
+    height: 40px;
+    background-color: #FF683C;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  
+  .mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:2%;
+    color :white;
+  }
+  .filterContainer{
+   width: 25%; 
+   padding: 2%;
+   display: flex;
+   flex-direction: column;
+  
+   background-color:#1D1D29;
+   h1{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+   }
+  }
+  .filter1,.filter2{
+    display: flex;
+    flex-direction: column;
+    h1{
+      font-size: 20px;
+    }
+    button{
+      background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    }
+  }
+  .filter1_1 ,.filter2_1{
+    .a{
+      display: flex;
+      justify-content: space-between;
+    }
+   
+  }
+  .filtername{
+    display: flex;
+    justify-content: center;
+    color: #FF683C;
+
+  }
+
+/* productcontainer */
+  .productContainer{
+   
+    width: 75%;
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns:  repeat(auto-fit, minmax(300px, auto));;
+    
+}
+
+.productContainer .product{
+    border-radius: 8%;
+    padding: 5px;
+    margin: 10px;
+    background-color:#1D1D29;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+.productContainer .product:hover {
+  transform: scale(1.1); /* Adjust the scaling factor as needed */
+}
+.productContainer img{
+    border-radius: 8%;
+    width: 100%;
+}
+.productContainer .product .button{
+width: 90%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.productContainer button{
+height: 30px;  
+border-radius: 10%;
+background-color: transparent;
+border: 2px solid #FF683C;
+color: #FF683C;
+cursor: pointer;
+}
+
+
+  @media all and (max-width: 900px) {
+    .filterContainer{
+      display: none;
+    }
+    .headingContainer{
+      text-align: center;
+    }
+    .headingContainer div{
+  
+      flex-direction: column;
+    }
+    .productContainer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Horizontal alignment */
+      align-items: center; /* Vertical alignment */
+      
+    }
+    
+  }
