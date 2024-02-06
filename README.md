@@ -26,7 +26,7 @@ PixelForge is a full-stack web application developed as an individual project, c
 
 ## Project Link
 
-[PixelForge - Live Demo](https://singular-jelly-95091c.netlify.app/)
+[PixelForge - Live Demo](https://tranquil-dieffenbachia-243c2f.netlify.app/)
 
 ## Difficulties Faced
 
