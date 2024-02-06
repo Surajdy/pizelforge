@@ -29,7 +29,7 @@ const Signup = () => {
     const payload = { name, email, password };
 
     try {
-      const response = await fetch('http://localhost:8000/signup', {
+      const response = await fetch('https://tiny-blue-ray-gear.cyclic.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const Signup = () => {
     const password = passwordInput.value;
 
     try {
-      const response = await fetch('http://localhost:8000/signin', {
+      const response = await fetch('https://tiny-blue-ray-gear.cyclic.app/signin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -4,6 +4,12 @@ import {useState,useEffect} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from "react-router-dom";
+import slide1 from '../images/slidderimages/1.jpg';
+import slide2 from '../images/slidderimages/2.jpg';
+import slide3 from '../images/slidderimages/3.jpg';
+import slide4 from '../images/slidderimages/4.jpg';
+import slide5 from '../images/slidderimages/1.jpg';
+
 
 const Home = ({ setCartItems, cartItems }) => {
   const  [trendingItems, setTrendingItems]=useState([]);
@@ -14,14 +20,14 @@ const Home = ({ setCartItems, cartItems }) => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/trending')
+    fetch('https://tiny-blue-ray-gear.cyclic.app/api/trending')
       .then(response => response.json())
       .then(data => setTrendingItems(data))
       .catch(error => console.error('Error fetching trending items:', error));
   }, []);
   const addToCart = async (product) => {
     try {
-      const response = await fetch('http://localhost:8000/api/addToCart', {
+      const response = await fetch('https://tiny-blue-ray-gear.cyclic.app/api/addToCart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,6 +101,7 @@ const Home = ({ setCartItems, cartItems }) => {
   </div>
   <br></br>
   <br></br>
+
    <div className="trending">
         <div  className="trending-heading">
             <h1>Trending</h1>
@@ -118,7 +125,7 @@ const Home = ({ setCartItems, cartItems }) => {
         </div>
      
    </div>
-  
+
     <div className="bestseller">
     <div  className="trending-heading">
             <h1>Bestseller</h1>

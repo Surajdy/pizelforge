@@ -12,7 +12,7 @@ const Products = ({ setCartItems, cartItems }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/trending');
+      const response = await fetch('https://tiny-blue-ray-gear.cyclic.app/api/trending');
       const data = await response.json();
       setProducts(data);
       setFilteredProducts(data);
@@ -27,7 +27,7 @@ const Products = ({ setCartItems, cartItems }) => {
 
   const addToCart = async (product) => {
     try {
-      const response = await fetch('http://localhost:8000/api/addToCart', {
+      const response = await fetch('https://tiny-blue-ray-gear.cyclic.app/api/addToCart', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -69,6 +69,7 @@ const Products = ({ setCartItems, cartItems }) => {
   return (
     <div className='productPage'>
       <div className='headingContainer'>
+        <br></br>
         <h1 style={{ color: "white", marginBottom: "50px", fontSize: "40px" }}>Best Games For PC</h1>
         <div>
           <h1>HOT GAMES</h1>

@@ -7,13 +7,13 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const [Razorpay, isLoaded] = useRazorpay();
+  const [Razorpay] = useRazorpay();
  const navigate=useNavigate();
 
 
 
    useEffect(() => {
-    fetch('http://localhost:8000/api/getcart')
+    fetch('https://tiny-blue-ray-gear.cyclic.app/api/getcart')
       .then(response => response.json())
       .then(data => setCart(data))
       .catch(error => console.error('Error fetching cart items:', error));
@@ -21,7 +21,7 @@ const Cart = () => {
 
   const removeItem = (itemId) => {
     // Make a request to remove item from the database
-    fetch(`http://localhost:8000/api/removeitem/${itemId}`, {
+    fetch(`https://tiny-blue-ray-gear.cyclic.app/api/removeitem/${itemId}`, {
       method: 'DELETE',
     })
       .then(response => response.json())
@@ -33,12 +33,17 @@ const Cart = () => {
   };
 
   const calculateTotal = () => {
-    return cart.reduce((total, item) => total + item.price, 0);
+    let totalInPaise = cart.reduce((total, item) => total + item.price * 100, 0);
+    console.log(totalInPaise);
+    // Ensure that the total is at least 100 paise (1 rupee)
+    totalInPaise = Math.max(totalInPaise, 100);
+    console.log(totalInPaise/100);
+    return totalInPaise/100;
   };
   const handlePayment = useCallback(() => {
     const options = {
       key: "rzp_test_yswl3N40ETtM35", // Replace with your actual API Key
-      amount: calculateTotal()*1000,
+      amount: calculateTotal()*100,
       currency: "INR",
       name: "PixelForge",
       description: "Test Transaction",
